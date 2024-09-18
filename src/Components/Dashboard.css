@@ -1,15 +1,18 @@
+/* Dashboard.css */
+
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    height: 100vh; 
+    height: 100vh; /* Full height */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
 
-.dashboard {
+.dashboard-container {
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     padding: 20px; /* Padding around content */
@@ -50,7 +53,7 @@ body {
     font-size: 1rem;
 }
 
-.dashboard-header h1 {
+.dashboard-title {
     font-size: 2.5rem;
     color: #2a2a2a;
     margin-bottom: 20px;
@@ -59,8 +62,8 @@ body {
     margin-top: 90px;
 }
 
-.dashboard-header p {
-    font-size: 1.rem;
+.dashboard-description {
+    font-size: 1rem;
     color: #6a6a6a;
     margin-bottom: 20px;
     margin-left: 150px;
@@ -73,11 +76,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     margin-top: auto; /* Push form to the bottom */
 }
 
-.dashboard-input {
+.dashboard-input-field {
     width: 60%;
     padding: 15px;
     font-size: 1rem;
@@ -87,7 +89,7 @@ body {
     margin-top: 0px;
 }
 
-.dashboard-button {
+.dashboard-submit-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -99,12 +101,14 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-.dashboard-button:hover {
+.dashboard-submit-button:hover {
+
+
     background-color: #0056b3;
 }
 
 /* About Us Section */
-.dashboard-about {
+.dashboard-about-us {
     margin: 40px auto; /* Center the section */
     padding: 20px; /* Padding inside the section */
     display: flex;
@@ -135,61 +139,64 @@ body {
     line-height: 1.6; /* Improve readability with line-height */
 }
 
-
 /* Footer */
 .dashboard-footer {
     margin-top: 30px;
-}
-
-.dashboard-socials {
+    padding: 20px;
+    background-color: #f1f1f1; /* Light gray background */
+    border-top: 1px solid #ddd; /* Border for separation */
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.dashboard-social-link {
-    color: #007bff;
-    font-size: 1.5rem;
-    margin-right: 10px;
+.dashboard-footer-socials {
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center social links */
+}
+
+.dashboard-footer-social-link {
+    color: #007bff; /* Primary color for links */
+    font-size: 1.2rem; /* Increased font size for better visibility */
+    margin: 0 15px; /* Space between links */
+    text-decoration: none; /* Remove underline */
     transition: color 0.3s ease-in-out;
 }
 
-.dashboard-social-link:hover {
-    color: #0056b3;
+.dashboard-footer-social-link:hover {
+    color: #0056b3; /* Darker blue on hover */
 }
 
-.dashboard-checkbox {
-    display: flex;
-    align-items: center;
+.dashboard-footer-info {
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0; /* Center checkbox with respect to the container */
+    color: #666; /* Darker gray for text */
 }
 
-.dashboard-checkbox input {
-    margin-right: 0.5rem;
-}
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .dashboard-footer-socials {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center items */
+        margin-bottom: 10px;
+    }
 
-.dashboard-info {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.dashboard-info li {
-    font-size: 0.9rem;
-    color: #6a6a6a;
+    .dashboard-footer-social-link {
+        margin-bottom: 10px; /* Space between stacked links */
+        font-size: 1rem; /* Smaller font size on mobile */
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .dashboard-input {
+    .dashboard-input-field {
         width: auto; /* Full width minus padding */
         border-radius: 0.5rem; /* Rounded corners for mobile */
         padding-left: 0.5rem; /* Add left padding for better UX */
         box-sizing: border-box; /* Include padding in width calculation */
     }
 
-    .dashboard-button {
+    .dashboard-submit-button {
         width: auto; /* Full width minus padding */
         border-radius: 0.5rem; /* Rounded corners for mobile */
         margin-top: -1px; /* Remove margin for seamless look */

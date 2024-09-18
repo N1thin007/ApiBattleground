@@ -49,7 +49,6 @@ const DomainBreachAnalytics = () => {
       return <p>No data available.</p>;
     }
 
-    // If data is an object (not array), convert to an array of key-value pairs
     const tableData = Array.isArray(data)
       ? data
       : Object.entries(data).map(([key, value]) => ({ key, value }));
@@ -59,15 +58,15 @@ const DomainBreachAnalytics = () => {
         <thead>
           <tr>
             {Object.keys(tableData[0]).map((key) => (
-              <th key={key}>{key}</th>
+              <th key={key} style={styles.th}>{key}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {tableData.map((row, index) => (
-            <tr key={index}>
+            <tr key={index} style={styles.tr}>
               {Object.values(row).map((value, i) => (
-                <td key={i}>{typeof value === 'object' ? JSON.stringify(value) : value}</td>
+                <td key={i} style={styles.td}>{typeof value === 'object' ? JSON.stringify(value) : value}</td>
               ))}
             </tr>
           ))}
@@ -164,78 +163,116 @@ const DomainBreachAnalytics = () => {
 
 const styles = {
   container: {
-    maxWidth: '800px',
-    margin: '0 auto',
+    maxWidth: '1000px',
+    margin: '40px auto',
+    padding: '40px',
+    backgroundColor: '#f4f7f9',
+    borderRadius: '15px',
+    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+    fontFamily: 'Poppins, sans-serif',
     textAlign: 'center',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-    borderRadius: '8px',
   },
   input: {
-    padding: '12px',
-    width: '100%',
-    marginBottom: '15px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
+    padding: '15px',
+    width: '97%',
+    marginBottom: '20px',
+    fontSize: '18px',
+    borderRadius: '8px',
+    border: '1px solid #ced4da',
+    boxShadow: 'inset 0 3px 6px rgba(0, 0, 0, 0.05)',
+    transition: 'border 0.3s ease, box-shadow 0.3s ease',
   },
   button: {
-    padding: '12px 24px',
-    fontSize: '16px',
+    padding: '14px 28px',
+    fontSize: '18px',
+    fontWeight: '600',
     cursor: 'pointer',
     backgroundColor: '#18bc9c',
     color: '#fff',
     border: 'none',
-    borderRadius: '6px',
-    transition: 'background-color 0.3s',
+    borderRadius: '8px',
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
+    boxShadow: '0 6px 15px rgba(24, 188, 156, 0.2)',
   },
   error: {
-    color: 'red',
+    color: '#e74c3c',
     marginTop: '10px',
+    fontWeight: '500',
+    fontSize: '14px',
   },
   success: {
-    color: 'green',
+    color: '#2ecc71',
     marginTop: '10px',
+    fontWeight: '500',
+    fontSize: '14px',
   },
   buttonsContainer: {
     display: 'flex',
-    justifyContent: 'space-around',
-    marginTop: '20px',
+    justifyContent: 'space-evenly',
+    marginTop: '30px',
+    gap: '20px',
     flexWrap: 'wrap',
+    paddingLeft: '10px',
+    paddingRight: '10px',
   },
   sectionButton: {
-    padding: '10px 20px',
-    fontSize: '14px',
+    padding: '14px 30px',
+    fontSize: '16px',
+    fontWeight: '500',
     cursor: 'pointer',
     backgroundColor: '#3498db',
     color: '#fff',
     border: 'none',
-    borderRadius: '30px',
-    transition: 'transform 0.3s',
+    borderRadius: '40px',
+    transition: 'transform 0.3s ease, background-color 0.3s ease',
     margin: '10px',
-  },
-  sectionButtonHover: {
-    transform: 'scale(1.05)',
+    boxShadow: '0 6px 12px rgba(52, 152, 219, 0.2)',
   },
   sectionContent: {
-    marginTop: '20px',
+    marginTop: '25px',
     textAlign: 'left',
+    fontSize: '16px',
+    lineHeight: '1.6',
+    color: '#333',
   },
   table: {
     width: '100%',
+    maxWidth: '100%',
     borderCollapse: 'collapse',
-    marginTop: '20px',
+    marginTop: '30px',
+    boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)',
+    borderRadius: '10px',
+    overflow: 'hidden',
+    tableLayout: 'fixed', // Prevents the table from expanding beyond its container
   },
   th: {
     backgroundColor: '#3498db',
-    color: 'white',
-    padding: '10px',
-    border: '1px solid #ddd',
+    color: '#fff',
+    padding: '12px 15px',
+    borderBottom: '2px solid #ddd',
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: '0.1em',
+    fontSize: '14px',
+    textAlign: 'left',
+    whiteSpace: 'nowrap',
+  },
+  tr: {
+    transition: 'background-color 0.2s ease',
+  },
+  trHover: {
+    backgroundColor: '#f5f9fc',
   },
   td: {
-    padding: '10px',
-    border: '1px solid #ddd',
-    textAlign: 'center',
+    padding: '12px 15px',
+    borderBottom: '1px solid #ddd',
+    textAlign: 'left',
+    fontSize: '14px',
+    color: '#555',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: '200px', // Sets a max-width for table cells
+    wordBreak: 'break-all', // Breaks words to prevent overflow
   },
 };
 

@@ -1,47 +1,93 @@
-.container {
-    max-width: 600px;
-    margin: 50px auto;
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h1 {
     text-align: center;
-  }
-  
-  .input-field {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #444;
+}
+
+.input-field {
+    width: calc(100% - 22px);
     padding: 10px;
-    margin: 10px 0;
-    width: 80%;
+    margin: 0 auto;
+    display: block;
     border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .check-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.check-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
     cursor: pointer;
-  }
-  
-  .check-button:hover {
-    background-color: #45a049;
-  }
-  
-  .error-message {
-    color: red;
-    font-weight: bold;
-  }
-  
-  .breach-table {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.check-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.breach-table-container {
+    max-height: 400px; 
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.breach-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .breach-table th, .breach-table td {
+    font-size: 1rem;
+}
+
+.breach-table th,
+.breach-table td {
     border: 1px solid #ddd;
     padding: 8px;
-  }
-  
-  .breach-table th {
-    background-color: #f2f2f2;
     text-align: left;
-  }
+}
+
+.breach-table thead {
+    background-color: #f4f4f4;
+}
+
+.breach-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.breach-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.breach-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #444;
+} */
