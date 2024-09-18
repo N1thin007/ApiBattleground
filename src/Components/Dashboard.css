@@ -1,4 +1,4 @@
-/* Dashboard.css */
+Dashboard.css
 
 /* General Styling */
 body {
@@ -27,6 +27,7 @@ body {
     margin-bottom: 20px;
     padding-bottom: 40px;
     margin-top: 0; /* Ensure header starts at the top */
+    padding-right: 40px;
 }
 
 .dashboard-nav {

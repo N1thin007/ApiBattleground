@@ -4,7 +4,7 @@ import './Dashboard.css';
 import Modal from './Modal';
 import AllBreachModal from './AllBreachModal';
 import EmailChecker from './EmailChecker';
-
+import BreachList from './BreachList';
 const Dashboard = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -56,9 +56,11 @@ const Dashboard = () => {
         <nav className="dashboard-nav">
           <ul>
             <li><Link to="#" onClick={openModal}>Anonymous Password Check</Link></li>
-            <li><Link to="/email-checker">All Breach Data</Link></li>
+            <li><Link to="/email-checker">Email Breach Check</Link></li>
             <li><Link to="/domain-specific-breach">Domain-Specific Breach</Link></li>
             <li><Link to="/email-breach-analytics">Email Breach Analytics</Link></li>
+            <li><Link to="/b">All Breaches</Link></li>
+
           </ul>
         </nav>
         <h1 className="dashboard-title">Check if someone's compromised an online account linked to your email</h1>

@@ -7,7 +7,7 @@ import AllBreachData from './Components/EmailChecker';
 import DomainSpecificBreach from './Components/DomainBreaches';
 import EmailBreachAnalytics from './Components/BreachAnalytics';
 import EmailChecker from './Components/EmailChecker';
-
+import BreachList from './Components/BreachList';
 const App = () => {
   return (
     <Router>
@@ -18,6 +18,8 @@ const App = () => {
         <Route path="/domain-specific-breach" element={<DomainSpecificBreach />} />
         <Route path="/email-breach-analytics" element={<EmailBreachAnalytics />} />
         <Route path="/email-checker" element={<EmailChecker />} />
+        <Route path="/b" element={<BreachList />} />
+
       </Routes>
     </Router>
   );

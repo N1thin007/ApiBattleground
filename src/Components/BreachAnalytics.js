@@ -33,7 +33,7 @@ const BreachAnalytics = () => {
 
   return (
     <div style={styles.container}>
-      <h1>Email Breach Checker</h1>
+      <h1>Email Breach Analytics</h1>
       <input
         type="email"
         placeholder="Enter your email"
@@ -80,7 +80,7 @@ const styles = {
     padding: '10px 20px',
     fontSize: '16px',
     cursor: 'pointer',
-    backgroundColor: '#18bc9c',
+    backgroundColor: '#007bff',
     color: '#fff',
     border: 'none',
     borderRadius: '5px',

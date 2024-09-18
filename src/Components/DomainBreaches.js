@@ -187,7 +187,7 @@ const styles = {
     fontSize: '18px',
     fontWeight: '600',
     cursor: 'pointer',
-    backgroundColor: '#18bc9c',
+    backgroundColor: '#007bff',
     color: '#fff',
     border: 'none',
     borderRadius: '8px',
