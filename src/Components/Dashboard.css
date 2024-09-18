@@ -1,39 +1,80 @@
-/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
+    height: 100vh; 
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-.dashboard-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 40px 20px;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.dashboard {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Padding around content */
+    text-align: center; /* Center text */
+    background-color: white; /* Background color */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
+.dashboard-header {
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    margin-top: 0; /* Ensure header starts at the top */
+}
+
+.dashboard-nav {
+    background-color: #007bff;
+    padding: 10px 0px;
+    margin-bottom: 30px;
+}
+
+.dashboard-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.dashboard-nav li {
+    margin: 0 20px;
+}
+
+.dashboard-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
 .dashboard-header h1 {
     font-size: 2.5rem;
     color: #2a2a2a;
     margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 90px;
 }
 
 .dashboard-header p {
-    font-size: 1.2rem;
+    font-size: 1.rem;
     color: #6a6a6a;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
 }
 
 /* Form */
 .dashboard-form {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center align items vertically */
+    align-items: center;
+    
+    margin-top: auto; /* Push form to the bottom */
 }
 
 .dashboard-input {
@@ -43,6 +84,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 5px 0 0 5px;
     outline: none;
+    margin-top: 0px;
 }
 
 .dashboard-button {
@@ -50,58 +92,118 @@ body {
     color: white;
     border: none;
     padding: 17px 30px;
-    margin-left: 10px;
+    margin-left: 6px; /* Adjust to remove gap between input and button */
     font-size: 1rem;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    transition: background-color 0.3s ease-in-out;
 }
 
 .dashboard-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
+
+/* About Us Section */
+.dashboard-about {
+    margin: 40px auto; /* Center the section */
+    padding: 20px; /* Padding inside the section */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+}
+
+.dashboard-about-item {
+    background-color: #ffffff; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+    max-width: 300px; /* Limit width of each item */
+    text-align: left; /* Align text to the left for readability */
+}
+
+.dashboard-about-item h3 {
+    font-size: 1.5rem;
+    color: #007bff; /* Primary color for headings */
+    margin-bottom: 10px; /* Reduced margin for compactness */
+}
+
+.dashboard-about-item p {
+    font-size: 1rem;
+    color: #555; /* Slightly darker gray for better contrast */
+    line-height: 1.6; /* Improve readability with line-height */
+}
+
 
 /* Footer */
 .dashboard-footer {
-    margin-top: 30px; 
+    margin-top: 30px;
+}
+
+.dashboard-socials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-social-link {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.dashboard-social-link:hover {
+    color: #0056b3;
 }
 
 .dashboard-checkbox {
-    display: flex; 
-    align-items: center; 
-    font-size: 1rem; 
-    margin-left: 250px;
-
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0; /* Center checkbox with respect to the container */
 }
 
 .dashboard-checkbox input {
-    margin-right: 10px; 
+    margin-right: 0.5rem;
 }
 
 .dashboard-info {
-    list-style-type: none; 
-    padding-left: 0; 
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .dashboard-info li {
-    font-size: 1rem; 
-    color: #6a6a6a; 
+    font-size: 0.9rem;
+    color: #6a6a6a;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .dashboard-input {
-        width: calc(100% - 20px); /* Full width minus padding */
-        border-radius: 5px; /* Rounded corners for mobile */
-        margin-bottom: -1px; /* Remove margin for seamless look */
-        padding-left:10px; /* Add left padding for better UX */
-        box-sizing:border-box; /* Include padding in width calculation */
-        
-   }
+        width: auto; /* Full width minus padding */
+        border-radius: 0.5rem; /* Rounded corners for mobile */
+        padding-left: 0.5rem; /* Add left padding for better UX */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
 
-   .dashboard-button {
-       width: calc(100% -20px); /* Full width minus padding */
-       border-radius:5px; /* Rounded corners for mobile */
-       margin-top:-1px; /* Remove margin for seamless look */
-   }
+    .dashboard-button {
+        width: auto; /* Full width minus padding */
+        border-radius: 0.5rem; /* Rounded corners for mobile */
+        margin-top: -1px; /* Remove margin for seamless look */
+    }
+
+    .dashboard-nav li {
+        margin: 0.5rem;
+    }
+
+    .dashboard-nav a {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-about-item {
+        max-width: 100%; /* Full width on small screens */
+    }
 }

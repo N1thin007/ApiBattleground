@@ -62,7 +62,6 @@ const BreachAnalytics = () => {
   );
 };
 
-// Styling for the component
 const styles = {
   container: {
     maxWidth: '500px',
